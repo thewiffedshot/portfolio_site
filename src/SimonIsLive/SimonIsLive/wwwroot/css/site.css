@@ -1,0 +1,383 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+#home {
+    background: url("../images/landing_bg_ver3.jpg") no-repeat 50% 50%;
+    display: table;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+}
+
+.main-container {
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    overflow: hidden;
+}
+
+.netcore {
+    position: absolute;
+    width: 27vw;
+    height: auto;
+    top: -3vh;
+    left: 43vw;
+    z-index: 2;
+}
+
+.csharp {
+    position: absolute;
+    width: 18vw;
+    height: auto;
+    top: -12vh;
+    left: -27vw;
+    z-index: 2;
+}
+
+.js {
+    position: absolute;
+    width: 27vw;
+    height: auto;
+    top: 43vh;
+    left: 41vw;
+    z-index: 2;
+}
+
+.css {
+    position: absolute;
+    width: 18vw;
+    height: auto;
+    top: 30vh;
+    left: -13vw;
+    z-index: 2;
+}
+
+.landing-greet-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    vertical-align: middle;
+    justify-content: center;
+    align-items: center;
+    max-width: 45%;
+    max-height: 35%;
+    min-width: 0;
+    min-height: 0;
+    margin: 10vw auto 10vh auto;
+    z-index: 3;
+}
+
+.btn-desktop-purple {
+    background-image: linear-gradient(to bottom, #8241a9, #3e176b);
+    border-color: #150a27;
+    color: #fff;
+}
+
+.btn-desktop-purple > span {
+    color: #fff;
+}
+
+.btn-desktop-purple:active {
+    background-image: linear-gradient(to top, #8241a9, #6028bd) !important;
+}
+
+@media (hover: hover) {
+    .btn-desktop-purple:hover {
+        background: none;
+        background-image: linear-gradient(to bottom, #8c50f9, #351b67);
+        border-color: #150a27;
+    }
+}
+
+.button-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    opacity: 0;
+    justify-content: center;
+    vertical-align: middle;
+    animation: fadeIn 4s;
+    -webkit-animation: fadeIn 4s;
+    -moz-animation: fadeIn 4s;
+    -o-animation: fadeIn 4s;
+    -ms-animation: fadeIn 4s;
+    animation-fill-mode: forwards;
+}
+
+.btn > img {
+    height: 1.4em;
+    width: auto;
+    vertical-align: middle;
+}
+
+.btn > span {
+    vertical-align: middle;
+    color: snow;
+}
+
+.btn {
+    font-family: Arial, sans-serif;
+    font-size: 1.8vw;
+}
+
+.github-btn {
+    margin: .1em .1em .1em .1em;
+}
+
+.greet-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0 0 30px 0;
+}
+
+.greet-letter > img {
+    width: 100%;
+    height: auto;
+    margin: -15px;
+}
+
+.skill-label {
+    opacity: 0;
+    animation: fadeIn 2s;
+    -webkit-animation: fadeIn 2s;
+    -moz-animation: fadeIn 2s;
+    -o-animation: fadeIn 2s;
+    -ms-animation: fadeIn 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 5s;
+}
+
+.greet-row-1 {
+    max-width: 60%;
+    opacity: 0;
+    animation: fadeIn 4s;
+    -webkit-animation: fadeIn 4s;
+    -moz-animation: fadeIn 4s;
+    -o-animation: fadeIn 4s;
+    -ms-animation: fadeIn 4s;
+    animation-fill-mode: forwards;
+}
+
+.greet-row-2 {
+    max-width: 33%;
+    opacity: 0;
+    animation: fadeIn 2s, text-flicker 25s linear infinite;
+    -webkit-animation: fadeIn 2s, text-flicker 25s linear infinite;
+    -moz-animation: fadeIn 2s, text-flicker 25s linear infinite;
+    -o-animation: fadeIn 2s, text-flicker 25s linear infinite;
+    -ms-animation: fadeIn 2s, text-flicker 25s linear infinite;
+    animation-fill-mode: forwards;
+}
+
+.greet-row-3 {
+    max-width: 60%;
+    opacity: 0;
+    animation: fadeIn 4s, text-flicker 18s linear infinite;
+    -webkit-animation: fadeIn 4s, text-flicker 18s linear infinite;
+    -moz-animation: fadeIn 4s, text-flicker 18s linear infinite;
+    -o-animation: fadeIn 4s, text-flicker 18s linear infinite;
+    -ms-animation: fadeIn 4s, text-flicker 18s linear infinite;
+    animation-fill-mode: forwards;
+}
+
+#simon-i {
+    animation: fadeIn .5s, letter-flicker 8s linear infinite;
+    -webkit-animation: fadeIn .5s, letter-flicker 8s linear infinite;
+    -moz-animation: fadeIn .5s, letter-flicker 8s linear infinite;
+    -o-animation: fadeIn .5s, letter-flicker 8s linear infinite;
+    -ms-animation: fadeIn .5s, letter-flicker 8s linear infinite;
+    animation-fill-mode: forwards;
+}
+
+#simon-o {
+    animation: fadeIn 1s;
+    -webkit-animation: fadeIn 1s;
+    -moz-animation: fadeIn 1s;
+    -o-animation: fadeIn 1s;
+    -ms-animation: fadeIn 1s;
+    animation-fill-mode: forwards;
+}
+
+.fade-in-1-5 {
+    animation: fadeIn 1.5s;
+    -webkit-animation: fadeIn 1.5s;
+    -moz-animation: fadeIn 1.5s;
+    -o-animation: fadeIn 1.5s;
+    -ms-animation: fadeIn 1.5s;
+    animation-fill-mode: forwards;
+}
+
+#simon-n {
+    animation: fadeIn 2.5s, letter-flicker 7s linear infinite;
+    -webkit-animation: fadeIn 2.5s, letter-flicker 7s linear infinite;
+    -moz-animation: fadeIn 2.5s, letter-flicker 7s linear infinite;
+    -o-animation: fadeIn 2.5s, letter-flicker 7s linear infinite;
+    -ms-animation: fadeIn 2.5s, letter-flicker 7s linear infinite;
+    animation-fill-mode: forwards;
+}
+
+#simon-s {
+    animation: fadeIn 3.5s;
+    -webkit-animation: fadeIn 3.5s;
+    -moz-animation: fadeIn 3.5s;
+    -o-animation: fadeIn 3.5s;
+    -ms-animation: fadeIn 3.5s;
+    animation-fill-mode: forwards;
+}
+
+#simon-m {
+    animation: fadeIn 4s, letter-flicker 20s linear infinite;
+    -webkit-animation: fadeIn 4s, letter-flicker 20s linear infinite;
+    -moz-animation: fadeIn 4s, letter-flicker 20s linear infinite;
+    -o-animation: fadeIn 4s, letter-flicker 20s linear infinite;
+    -ms-animation: fadeIn 4s, letter-flicker 20s linear infinite;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes text-flicker {
+    0% {
+        opacity: 0.1;
+    }
+
+    2% {
+        opacity: 1;
+    }
+
+    8% {
+        opacity: 0.1;
+    }
+
+    9% {
+        opacity: 1;
+    }
+
+    12% {
+        opacity: 0.1;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 0.3;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 0.7;
+    }
+
+    72% {
+        opacity: 0.2;
+    }
+
+    77% {
+        opacity: .9;
+    }
+
+    100% {
+        opacity: .9;
+    }
+}
+
+@keyframes letter-flicker {
+    0% {
+        opacity: 0.1;
+    }
+
+    2% {
+        opacity: 0.1;
+    }
+
+    4% {
+        opacity: 1;
+    }
+
+
+    19% {
+        opacity: 1;
+    }
+
+    21% {
+        opacity: 0.1;
+    }
+
+    23% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    83% {
+        opacity: 0.4;
+    }
+
+    87% {
+        opacity: 1;
+    }
+}
